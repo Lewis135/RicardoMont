@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articulos",
+  "info": {
+    "name": "Articulo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "content": {
+      "type": "richtext"
+    },
+    "summary": {
+      "type": "text"
+    },
+    "creationDate": {
+      "type": "datetime"
+    },
+    "coverPhoto": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
